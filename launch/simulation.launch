@@ -1,0 +1,14 @@
+<launch>
+  <!-- Load the Gazebo simulation environment -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find door_detection)/worlds/my_world.world"/>
+  </include>
+
+  <!-- Load the robot description -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find door_detection)/urdf/my_robot.urdf'" />
+
+  <!-- Spawn the robot model -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-param robot_description -urdf -model my_robot -x 0 -y 0 -z 0.5 -R 0 -P 0 -Y 1.5708"/>
+</launch>
+

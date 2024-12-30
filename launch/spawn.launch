@@ -1,0 +1,27 @@
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <!-- World file -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find door_detection)/urdf/my_robot.urdf'"/>
+  <param name="use_sim_time" value="$(arg use_sim_time)"/>
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model my_robot" />
+
+  <!-- Load Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find door_detection)/worlds/my_world.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- Include RViz -->
+  <include file="$(find door_detection)/launch/rviz.launch" />
+</launch>
+
