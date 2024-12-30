@@ -1,0 +1,28 @@
+Panels:
+- Class: rviz/Displays
+  Name: Displays
+  Properties:
+    Displays:
+      - Class: rviz/PointCloud2
+        Name: Edges
+        Topic: /detected_edges
+        Style: Points
+        Color Transformer: Intensity
+        Alpha: 1.0
+        Size (Pixels): 3
+      - Class: rviz/PointCloud2
+        Name: Original Point Cloud
+        Topic: /point_cloud
+        Style: Points
+        Color Transformer: FlatColor
+        Color: 255; 255; 255
+        Alpha: 1.0
+        Size (Pixels): 1
+- Class: rviz/Views
+  Name: Views
+  Properties:
+    Current View:
+      Class: rviz/Orbit
+      Focal Point: 0; 0; 0
+      Distance: 10
+
