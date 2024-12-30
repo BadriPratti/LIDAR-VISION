@@ -1,4 +1,0 @@
-<launch>
-    <node name="pcd_publisher" pkg="door_detection" type="pcd_publisher" output="screen"/>
-    <node name="edge_detection_node" pkg="door_detection" type="edge_detection_node" output="screen"/>
-</launch>

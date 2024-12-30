@@ -1,5 +1,0 @@
-<include>
-    <uri>model://my_robot</uri>
-    <pose>2 3 0 0 0 1.5708</pose> <!-- 1.5708 radians is 90 degrees -->
-</include>
-
