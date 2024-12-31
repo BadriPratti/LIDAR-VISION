@@ -1,7 +1,7 @@
 LIDAR-VISION: Door Edge Detection using LIDAR Sensors
 
-Project Overview
 
+Project Overview 
 This project leverages LIDAR sensors to detect door edges, enhancing the spatial awareness and navigational capabilities of autonomous vehicles. By integrating LIDAR perception with a custom edge detection algorithm, the system enables autonomous vehicles to identify and navigate through doorways with precision.
 
 Key Features
@@ -21,4 +21,5 @@ Autonomous Vehicles: Facilitates safe and efficient indoor and outdoor navigatio
 Robotics: Enhances the perception abilities of service robots operating in environments with door-based access points.
 
 Industrial Automation: Improves the mobility of automated guided vehicles (AGVs) in warehouses and factories, enabling them to traverse doorways without manual intervention.
+
 
